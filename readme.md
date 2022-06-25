@@ -9,14 +9,13 @@ the game is very similar to the original, old-mobilephone versions of the snake 
 move the snake `up, down, left, right` using the `Arrow-Up, Arrow-Down, Arrow-Left, Arrow-Right` buttons respectively. 
 
 if you run throw the grid borders or the obstacles (`brown rectangles`), the game is over.
-
 collect food (`yellow rectangles`) to increase you score and reach higher levels.
 
 each game level has a `maximum Score`. if you collect enough food, the next level is unlocked!
-
 if you reach level 8 and reach the maximum Score, the game will start from the beginning.
 
 ## Controls
+
 the game was supposed to be made compatible to play only on desktop devices. the further mobile devices compatibility was not implemented due to time reasons.
 
 

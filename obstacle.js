@@ -7,6 +7,7 @@ export let obstacles = []
 let numberOfObstacles = 12;
 let randomObstacles = [];
 
+// returns an eligible random position on the grid for an obstacle.
 function getRandomObstaclePosition() {
     let newObstaclePosition;
     // obstacles are drawn in the logic after the food, so no need to include food in this
@@ -15,7 +16,7 @@ function getRandomObstaclePosition() {
     }
     return newObstaclePosition
 }
-//new
+// clears the obstacles array.
 export function clearObstacles(){
     obstacles = [];
 }

@@ -6,6 +6,7 @@ import {storage} from "./game.js";
 
 const gameBoard = document.getElementById('game-board')
 
+// View Cycle: clear and re-draw all game elements on the board.
 export function draw() {
     document.getElementById("score").innerHTML = `<strong>Score: ${score}</strong>`;
     document.getElementById("level").innerHTML = `<strong>Level: ${level}</strong>`
