@@ -3,17 +3,18 @@
 import { getInputDirection } from "./input.js"
 import { equalPositions } from "./grid.js";
 
+// represents the snake. hard coded start value.
 let snakeBody = [{x: 11, y: 11}]
 export let snakeSpeed = 4 // times per second
 let newSegments = 0;
 
 
-//not complete
+// sets the game speed to timesPerSecond.
 export function setGameSpeed(timesPerSecond){
     snakeSpeed = timesPerSecond;
 }
 
-// updates the snake length and/or direction
+// updates the snake length and/or direction.
 export function updateSnake() {
     addSegments();
     const inputDirection = getInputDirection()
@@ -24,7 +25,7 @@ export function updateSnake() {
     snakeBody[0].x += inputDirection.x
     snakeBody[0].y += inputDirection.y
 }
-//new
+// clears the snake from the board.
 export function clearSnake(){
     snakeBody = [{x: 11, y: 11}];
 }
@@ -50,8 +51,8 @@ export function getSnakeHead() {
 export function expandSnake(amount){
     newSegments += amount
 }
-// helper function:
-function addSegments() {// add the new parts to the snake after "eating" them
+// helper function: add the new parts to the snake after "eating" them
+function addSegments() {
     for (let i=0; i < newSegments; i++){
         snakeBody.push({ ...snakeBody[snakeBody.length - 1] }) // append new element at the end of the snake.
 

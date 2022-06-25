@@ -2,6 +2,7 @@
 /******************************************input.js********************************************/
 
 let inputDirection = {x: 0, y: 0}
+// save the previous input direction to decide the next direction.
 let lastInputDirection = {x: 0, y: 0}
 
 window.addEventListener('keydown', e => {
@@ -25,6 +26,7 @@ window.addEventListener('keydown', e => {
     }
 })
 
+// returns the input direction depending on user input.
 export function getInputDirection(){
     lastInputDirection = inputDirection
     return inputDirection

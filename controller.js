@@ -7,13 +7,14 @@ export let maxScore = 2;
 export let gameOver = false
 export let level = 1;
 
-// fetching level file
+// fetching level file function.
 export const getJson = async (file) =>(await fetch(file)).json()
 
-
+// increments the level.
 export function incrementLevel(byValue){
     level+=byValue;
 }
+// sets the max score to points.
 export function setMaxScore(points){
     maxScore = points;
 }
@@ -27,7 +28,7 @@ export function update() {
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection() || onObstacle(getSnakeHead())
 }
-
+// clears all the screen elements or sets new values for them.
 export function clearScreen(){
     clearObstacles();
     clearFood();

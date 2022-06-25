@@ -5,7 +5,8 @@ import { randomGridPosition } from './grid.js'
 import { onObstacle } from "./obstacle.js";
 
 export let score = 0;
-let food = getRandomFoodPosition()
+// represents the food. hard coded start value.
+let food = {x: 14, y: 14};
 const EXPANSION_RATE = 1 // the snake grows by 1, if it eats food
 // update the score and snake length every time the snake passes through food.
 export function updateFoodAndScore() {
@@ -15,11 +16,11 @@ export function updateFoodAndScore() {
         food = getRandomFoodPosition();
     }
 }
-//new
+// clears the score.
 export function clearScore(){
     score = 0;
 }
-//new
+// sets a new position for food. (hard coded.)
 export function clearFood(){
     food = {x: 11, y: 10};
 }
@@ -31,7 +32,7 @@ function getRandomFoodPosition() {
     }
     return newFoodPosition
 }
-// helper function:
+// helper function: increments score.
 function incrementScore(){
     score++;
 }
