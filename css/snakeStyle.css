@@ -1,0 +1,39 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+}
+#game-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lavender;
+}
+
+#game-board {
+    background-color: blue;
+    width: 70vmin;
+    height: 70vmin;
+    display: grid;
+    grid-template-rows: repeat(21,1fr);
+    grid-template-columns: repeat(21,1fr)
+}
+
+.snake {
+    background-color: darkgrey;
+    border: .25vmin solid black;
+}
+.food {
+    background-color: yellow;
+    border: .25vmin solid black;
+}
+.obstacle {
+    background-color: brown;
+    border: .25vmin solid black;
+}
+#score {
+    background-color: yellow;
+    color: black;
+    font-style: oblique;
+}
