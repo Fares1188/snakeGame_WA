@@ -21,7 +21,7 @@ export function clearScore(){
 }
 //new
 export function clearFood(){
-    food = getRandomFoodPosition();
+    food = {x: 11, y: 10};
 }
 // helper function: returns a random food position on the grid.
 function getRandomFoodPosition() {

@@ -1,11 +1,6 @@
 import { onSnake } from "./snake.js";
 import {randomGridPosition, createPosition, equalPositions} from "./grid.js";
 
-
-/*getJson('level1.json')
-    .then(res => {{ console.log(res['snakeSpeed']); console.log(res['maxScore']); console.log(res['obstacles'].length); for(let p in res['obstacles']) {console.log(res['obstacles'][p].x); console.log(res['obstacles'][p].y);}}})
-    .catch(err => console.error(err.message));
-*/
 // the obstacles are loaded from a json file.
 export let obstacles = []
 // for the random case of this class

@@ -6,8 +6,9 @@ import {update, gameOver, setMaxScore, maxScore, level, getJson, incrementLevel,
 import {draw} from "./view.js";
 import { score } from "./food.js";
 
-//const homeDir = '/wa/index.html';
 
+const homeDir = '/wa/index.html';
+export const storage = localStorage
 
 getJson('levels.json')
     .then(res => {
@@ -26,14 +27,14 @@ let lastRenderTime = 0
 async function main(currTime) {
     if (gameOver) {
         if (confirm('You lost. Press ok to restart.')) {
-            window.location = '/wa1/index.html'
+            window.location = homeDir;
         }
         return;
     }
     else if (maxScore === score) {
         if(level === 8){
             if(confirm("you win! there are no more available levels. click ok to restart.")){
-                window.location = '/wa1/index.html';
+                window.location = homeDir;
             }
             return;
         }
@@ -48,7 +49,7 @@ async function main(currTime) {
                 console.log(maxScore);
             })
             .catch(err => console.error(err.message));
-        console.log("level is" + level);
+        storage.setItem("High Score", storage.getItem("High Score") > document.getElementById("high_level").innerText.split(":")[1] ? storage.getItem("High Score"): 'Level ' + `${level} `);
         alert("You win, press ok to continue.");
     }
 
