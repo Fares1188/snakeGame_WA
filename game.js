@@ -9,8 +9,6 @@ import { score } from "./food.js";
 
 const homeDir = '/snakeGame_WA';
 // browser storage
-// the high level concept is made in a way that the browser only saves high score in a specific round.
-// once you play again and pass level 1, the storage high score will start counting again from Level 2 and so on.
 export const storage = localStorage
 
 // fetch the first level.
