@@ -7,7 +7,7 @@ import {draw} from "./view.js";
 import { score } from "./food.js";
 
 
-const homeDir = '/wa/index.html';
+const homeDir = '/snakeGame_WA';
 export const storage = localStorage
 
 getJson('levels.json')
